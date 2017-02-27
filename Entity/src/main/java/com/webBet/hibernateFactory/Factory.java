@@ -27,6 +27,7 @@ public class Factory {
     public UserInterface getUserInterface() {
         if (userInterface == null) {
             userInterface = new UserDAOimpl();
+
         }
         return userInterface;
     }
