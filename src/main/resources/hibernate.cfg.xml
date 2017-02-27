@@ -13,10 +13,10 @@
     <property name="show_sql">true</property>
     <property name="hbm2ddl.auto">update</property>
     <perty name="hibernate.cache.use_structured_entries">trueperty>
-    <mapping class="com.webOrganizer.dao.entity.User"/>
-    <mapping class="com.webOrganizer.dao.entity.IncomeBill"/>
-    <mapping class="com.webOrganizer.dao.entity.OutcomeBill"/>
-    <mapping class="com.webOrganizer.dao.entity.Accauntstate"/>
+    <mapping class="com.webOrganizer.com.webBet.dao.entity.User"/>
+    <mapping class="com.webOrganizer.com.webBet.dao.entity.IncomeBill"/>
+    <mapping class="com.webOrganizer.com.webBet.dao.entity.OutcomeBill"/>
+    <mapping class="com.webOrganizer.com.webBet.dao.entity.Accauntstate"/>
 </session-factory>
 </hibernate-configuration>
 

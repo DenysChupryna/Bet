@@ -1,4 +1,4 @@
-package Entity;
+package com.webBet.dao.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -16,4 +16,5 @@ public class Match {
 
 
     public Match() {
+    }
 }
