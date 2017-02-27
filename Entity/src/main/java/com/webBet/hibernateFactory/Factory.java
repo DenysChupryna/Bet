@@ -7,9 +7,6 @@ import com.webBet.dao.interfaces.MatchInterface;
 import com.webBet.dao.interfaces.TeamInterface;
 import com.webBet.dao.interfaces.UserInterface;
 
-/**
- * Created by Анна on 25.02.2017.
- */
 public class Factory {
 
     private static UserInterface userInterface = null;
@@ -27,7 +24,6 @@ public class Factory {
     public UserInterface getUserInterface() {
         if (userInterface == null) {
             userInterface = new UserDAOimpl();
-
         }
         return userInterface;
     }
