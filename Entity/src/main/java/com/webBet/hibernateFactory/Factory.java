@@ -3,15 +3,15 @@ package com.webBet.hibernateFactory;
 import com.webBet.dao.implement.MatchDAOimpl;
 import com.webBet.dao.implement.TeamDAOimpl;
 import com.webBet.dao.implement.UserDAOimpl;
-import com.webBet.dao.interfaces.MatchInterface;
-import com.webBet.dao.interfaces.TeamInterface;
-import com.webBet.dao.interfaces.UserInterface;
+import com.webBet.dao.interfaces.MatchDAO;
+import com.webBet.dao.interfaces.TeamDAO;
+import com.webBet.dao.interfaces.UserDAO;
 
 public class Factory {
 
-    private static UserInterface userInterface = null;
-    private static MatchInterface matchInterface = null;
-    private static TeamInterface teamInterface = null;
+    private static UserDAO userDAO = null;
+    private static MatchDAO matchDAO = null;
+    private static TeamDAO teamDAO = null;
     private static Factory instance = null;
 
     public static synchronized Factory getInstance() {
@@ -21,23 +21,23 @@ public class Factory {
         return instance;
     }
 
-    public UserInterface getUserInterface() {
-        if (userInterface == null) {
-            userInterface = new UserDAOimpl();
+    public UserDAO getUserInterface() {
+        if (userDAO == null) {
+            userDAO = new UserDAOimpl();
         }
-        return userInterface;
+        return userDAO;
     }
-    public MatchInterface getMatchInterface() {
-        if (matchInterface == null) {
-            matchInterface = new MatchDAOimpl();
+    public MatchDAO getMatchInterface() {
+        if (matchDAO == null) {
+            matchDAO = new MatchDAOimpl();
         }
-        return matchInterface;
+        return matchDAO;
     }
-    public TeamInterface getTeamInterface() {
-        if (teamInterface == null) {
-            teamInterface = new TeamDAOimpl();
+    public TeamDAO getTeamInterface() {
+        if (teamDAO == null) {
+            teamDAO = new TeamDAOimpl();
         }
-        return teamInterface;
+        return teamDAO;
     }
 
 

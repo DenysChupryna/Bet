@@ -1,5 +1,4 @@
 package com.webBet.dao.interfaces;
 
-
-public interface MatchInterface {
+public interface TeamDAO {
 }

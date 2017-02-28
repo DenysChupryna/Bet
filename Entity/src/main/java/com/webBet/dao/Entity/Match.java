@@ -3,9 +3,6 @@ package com.webBet.dao.Entity;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-/**
- * Created by Денис on 14.02.2017.
- */
 @Entity
 @Table(name = "match")
 public class Match {
