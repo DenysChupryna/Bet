@@ -6,8 +6,7 @@ import com.webBet.hibernateFactory.HibernateSessionFactory;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 
-public class UserDAOimpl implements UserDAO{
-
+public class UserDAOimpl implements UserDAO {
 
 
     @Override
@@ -18,7 +17,7 @@ public class UserDAOimpl implements UserDAO{
             session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
-            //MUST be dan
+
         }
     }
 
@@ -31,7 +30,7 @@ public class UserDAOimpl implements UserDAO{
             session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
-            //MUST be dan
+
         }
     }
 
@@ -45,7 +44,7 @@ public class UserDAOimpl implements UserDAO{
             user = (User) query.uniqueResult();
         } catch (Exception e) {
             e.printStackTrace();
-            //MUST be dan
+
         }
         return user;
     }
@@ -58,10 +57,11 @@ public class UserDAOimpl implements UserDAO{
             id = (Integer) query.uniqueResult();
         } catch (Exception e) {
             e.printStackTrace();
-            //MUST be dan
+
         }
         return id;
     }
+
     public User getUserById(int id) {
         User user = null;
         try (Session session = HibernateSessionFactory.getSessionFactory().openSession()) {
@@ -70,10 +70,11 @@ public class UserDAOimpl implements UserDAO{
             user = (User) query.uniqueResult();
         } catch (Exception e) {
             e.printStackTrace();
-            //MUST be dan
+
         }
         return user;
     }
+
     @Override
     public void deleteUser(User user) {
         try (Session session = HibernateSessionFactory.getSessionFactory().openSession()) {
@@ -82,7 +83,7 @@ public class UserDAOimpl implements UserDAO{
             session.getTransaction().commit();
         } catch (Exception e) {
             e.printStackTrace();
-            //MUST be dan
+
         }
     }
 }
