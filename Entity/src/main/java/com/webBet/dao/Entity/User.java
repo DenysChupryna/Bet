@@ -3,6 +3,8 @@ package com.webBet.dao.Entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "user")
@@ -12,11 +14,17 @@ public class User {
     private String password;
     private double money;
 
+    private Set<Match> match = new HashSet<Match>();
+
+
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
 
     public User(){
 
     }
+
+
+
 
 
 
