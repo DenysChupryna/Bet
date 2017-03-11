@@ -1,8 +1,8 @@
 package com.webBet.dao.Entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 
 /**
  * Created by Денис on 14.02.2017.
@@ -12,11 +12,18 @@ import javax.persistence.Table;
 public class Team {
     private int teamId;
     private String teamName;
-    private int idTeam;
     private double teamRate;
 
     public Team() {
     }
+
+
+    @Id
+    @GeneratedValue(generator="increment")
+    @GenericGenerator(name="increment", strategy="increment")
+
+
+
 
     @Column(name = "teamId")
 

@@ -17,9 +17,18 @@ public class User {
     private Set<Match> match = new HashSet<Match>();
 
     public User(){
-
     }
 
+    public User(String name, String password) {
+        this.name = name;
+        this.password = password;
+    }
+
+    public User(String name, String password, Set<Match> match) {
+        this.name = name;
+        this.password = password;
+        this.match = match;
+        }
 
     @Id
     @GeneratedValue(generator = "increment")
@@ -59,5 +68,25 @@ public class User {
 
     public void setMoney(double money) {
         this.money = money;
+    }
+
+    @Column(name="match")
+
+    public Set<Match> getMatch() {
+        return match;
+    }
+
+    public void setMatch(Set<Match> match) {
+        this.match = match;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "idUser=" + idUser +
+                ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
+                ", money=" + money +
+                '}';
     }
 }
