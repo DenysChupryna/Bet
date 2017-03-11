@@ -9,23 +9,16 @@ import java.util.Set;
 @Entity
 @Table(name = "user")
 public class User {
+
     private int idUser;
     private String name;
     private String password;
     private double money;
-
     private Set<Match> match = new HashSet<Match>();
-
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
 
     public User(){
 
     }
-
-
-
-
 
 
     @Id
@@ -58,6 +51,13 @@ public class User {
         this.password = password;
     }
 
+    @Column(name="money")
 
+    public double getMoney() {
+        return money;
+    }
 
+    public void setMoney(double money) {
+        this.money = money;
+    }
 }
