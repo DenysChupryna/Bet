@@ -1,10 +1,30 @@
 package com.webBet.main;
 
+import com.webBet.dao.Entity.Match;
+import com.webBet.dao.Entity.Team;
+import com.webBet.dao.Entity.User;
+import com.webBet.hibernateFactory.Factory;
+
 import java.sql.SQLException;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Main {
 
     public static void main(String[] args) throws SQLException{
+
+        User u1 = new User("Denys","0000",1000);
+        Team Juve = new Team("Juventus",1);
+        Team Napoli = new Team("Napoli",2);
+        Set<Team> team1 = new HashSet<Team>();
+        team1.add(Juve);
+        team1.add(Napoli);
+        Match match1 = new Match(1.7, 3.1, 4.2, 1, team1);
+
+        Factory.getInstance().getUserInterface().addUser(u1);
+        Factory.getInstance().getTeamInterface().addTeam(Juve);
+        Factory.getInstance().getTeamInterface().addTeam(Napoli);
+        Factory.getInstance().getMatchInterface().addMatch(match1);
 
 
     }

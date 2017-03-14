@@ -14,21 +14,31 @@ public class User {
     private String name;
     private String password;
     private double money;
+
     private Set<Match> match = new HashSet<Match>();
 
     public User(){
     }
 
-    public User(String name, String password) {
+    public User(String name, String password, double money) {
         this.name = name;
         this.password = password;
+        this.money = money;
     }
 
-    public User(String name, String password, Set<Match> match) {
+    public User(String name, String password, double money, Set<Match> match) {
         this.name = name;
         this.password = password;
+        this.money = money;
         this.match = match;
-        }
+    }
+
+    @ManyToMany
+    @JoinTable(name = "user_match",
+    joinColumns = @JoinColumn(name = "id_user"),
+    inverseJoinColumns = @JoinColumn(name = "id_match"))
+
+
 
     @Id
     @GeneratedValue(generator = "increment")
@@ -87,6 +97,7 @@ public class User {
                 ", name='" + name + '\'' +
                 ", password='" + password + '\'' +
                 ", money=" + money +
+                ", match='" + match + '\'' +
                 '}';
     }
 }
