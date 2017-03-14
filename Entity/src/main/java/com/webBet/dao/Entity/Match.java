@@ -119,4 +119,11 @@ public class Match {
         this.matchResult = matchResult;
         this.user = user;
     }
+
+    public Match(double coeffWin, double coeffDraw, double coeffLoss, int matchResult) {
+        this.coeffWin = coeffWin;
+        this.coeffDraw = coeffDraw;
+        this.coeffLoss = coeffLoss;
+        this.matchResult = matchResult;
+    }
 }

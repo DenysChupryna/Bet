@@ -19,12 +19,12 @@ public class Main {
         Set<Team> team1 = new HashSet<Team>();
         team1.add(Juve);
         team1.add(Napoli);
-        Match match1 = new Match(1.7, 3.1, 4.2, 1, team1);
+        Match match1 = new Match(1.7, 3.1, 4.2, 1);
 
-        Factory.getInstance().getUserInterface().addUser(u1);
-        Factory.getInstance().getTeamInterface().addTeam(Juve);
-        Factory.getInstance().getTeamInterface().addTeam(Napoli);
-        Factory.getInstance().getMatchInterface().addMatch(match1);
+        Factory.getInstance().getUserDAO().addUser(u1);
+        Factory.getInstance().getTeamDAO().addTeam(Juve);
+        Factory.getInstance().getTeamDAO().addTeam(Napoli);
+        Factory.getInstance().getMatchDAO().addMatch(match1);
 
 
     }
