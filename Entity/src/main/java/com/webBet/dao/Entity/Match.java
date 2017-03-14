@@ -44,13 +44,8 @@ public class Match {
     public Match() {
     }
 
-    public Match(double coeffWin, double coeffDraw, double coeffLoss, int matchResult, Set<Team> team) {
-        this.coeffWin = coeffWin;
-        this.coeffDraw = coeffDraw;
-        this.coeffLoss = coeffLoss;
-        this.matchResult = matchResult;
-        this.team = team;
-    }
+
+
 
     @Id
     @GeneratedValue(generator="increment")

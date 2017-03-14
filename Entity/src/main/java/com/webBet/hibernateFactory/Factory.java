@@ -21,19 +21,19 @@ public class Factory {
         return instance;
     }
 
-    public UserDAO getUserInterface() {
+    public UserDAO getUserDAO() {
         if (userDAO == null) {
             userDAO = new UserDAOimpl();
         }
         return userDAO;
     }
-    public MatchDAO getMatchInterface() {
+    public MatchDAO getMatchDAO() {
         if (matchDAO == null) {
             matchDAO = new MatchDAOimpl();
         }
         return matchDAO;
     }
-    public TeamDAO getTeamInterface() {
+    public TeamDAO getTeamDAO() {
         if (teamDAO == null) {
             teamDAO = new TeamDAOimpl();
         }
